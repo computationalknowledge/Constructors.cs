@@ -1,0 +1,43 @@
+using System;
+
+namespace ConsoleApp33
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // never anything here except to launch our program
+
+            Factorial f1;
+            // note: when we use new keyword: we are creating a memory allocation with a specific address in HEAP memory : how?
+            // by running the class CONSTRUCTOR !
+            // THE constructor is a special method which the compiler provides FOR you if you don't specify one
+            // it does the work of setting up the object!
+
+            // I can have multiple versions of the constructor!
+
+            f1 = new Factorial();
+
+            f1 = new Factorial("Joe", 20, true);
+        }
+    }
+
+    class Factorial
+    {
+        // zero args constructor
+        public Factorial()
+        {
+            Console.WriteLine("we are in the constructor now!!!!");
+        }
+
+        // 3 argument constructor: OVERLOADED VERSION 
+        public Factorial(string a, int b, bool c)
+        {
+            Console.WriteLine("{0}, {1}, {2} ", a, b, c );
+        }
+
+    }
+
+}
+
+
